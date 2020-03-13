@@ -4,11 +4,11 @@ $sql = "SELECT * FROM $my_table";
 $result = $db->query($sql);
 while ($row = $result->fetchArray(SQLITE3_ASSOC)){
 echo "<tr>";
-            echo "<td>" . $record['name'] . "</td>";
-            echo "<td>" . $record['start_time'] . "</td>";
-            echo "<td>" . $record['end_time'] . "</td>";
-            echo "<td>" . $record['image'] . "</td>";
-            echo "<td>" . $record['person'] . "</td>";
+            echo "<td>" <h5 style="color: green;"> .$row['name'].'</h5></td>
+            echo "<td>" <h5 style="color: green;"> .$row['start_time'].'</h5></td>
+            echo "<td>" <h5 style="color: red;"> .$row['end_time'].'</h5></td>
+            echo "<td>" <img src="data:image/jpeg;base64,'.base64_encode($row['img'] ).'" height="100" width="100"/> "</td>";
+            echo "<td>" <h5 style="background-color: #FFFF00;position:static;">Person detection </h5></td>
             echo "</tr>";
 }
 unset($db); 
