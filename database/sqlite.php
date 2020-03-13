@@ -12,3 +12,4 @@ echo "<tr>";
             echo "</tr>";
 }
 unset($db); 
+?>
